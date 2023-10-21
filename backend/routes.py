@@ -61,7 +61,7 @@ def health():
 def songs(): 
     """return songs data requested"""
     all_songs = [db.songs.find({})]
-    print(output[0])
+    # print(all_songs[0])
     return {"songs": parse_json(all_songs)}, 200
 
 
@@ -78,7 +78,7 @@ def get_song_by_id(id):
 def create_song():
     """create a new song data"""
     posted_song = request.json
-    print(posted_song['id'])
+    # print(posted_song['id'])
 
     song = db.songs.find_one({'id': posted_song['id']})
     if song: 
