@@ -61,7 +61,7 @@ def health():
 def songs(): 
     """return songs data requested"""
     all_songs = [db.songs.find({})]
-    # print(all_songs[0])
+    print(all_songs[0])
     return {"songs": parse_json(all_songs)}, 200
 
 
